@@ -1,19 +1,34 @@
-# Week 3 Project – Classification task using algorithms
+# Week 3 Project – Student Performance Prediction
 
 ## 📌 Overview
-This project focuses on building a **text classification model** using **TF-IDF vectorization** and **Logistic Regression**.  
-It demonstrates preprocessing with **NLTK**, model training with **scikit-learn**, and deployment using a **Gradio interface** for real-time predictions.
+This project predicts **student performance outcomes** (Pass/Fail) based on various academic and personal features from the **Student Performance Dataset**.  
+The notebook explores preprocessing, training models, and evaluating performance using machine learning techniques.
 
 ---
 
 ## ⚙️ Features
-- Text preprocessing using:
-  - Regex cleaning
-  - Stopword removal (NLTK)
-- Feature extraction with **TF-IDF Vectorizer**
-- Classification using **Logistic Regression**
-- Evaluation with **classification report**
-- Interactive **Gradio app** for predictions
+- Dataset preprocessing:
+  - Handle categorical variables with **Label Encoding**
+  - Drop irrelevant features (to avoid leakage)
+- Binary target creation:
+  - Pass if `G3 >= 10`, otherwise Fail
+- Models:
+  - **Logistic Regression**
+  - **Random Forest Classifier**
+- Evaluation:
+  - Accuracy, Precision, Recall, F1-score
+  - Feature importance analysis (Random Forest)
+
+---
+
+## 📂 Dataset
+The project uses the **Student Performance Dataset** (`student-mat.csv`), which includes features such as:
+- Demographics
+- Study habits
+- Family background
+- Academic history  
+
+Source: [UCI Machine Learning Repository – Student Performance Data Set](https://archive.ics.uci.edu/ml/datasets/student+performance)
 
 ---
 
@@ -21,6 +36,6 @@ It demonstrates preprocessing with **NLTK**, model training with **scikit-learn*
 Clone the repository and install dependencies:
 
 ```bash
-git clone https://github.com/your-username/week-2-project.git
-cd week-2-project
-pip install -r requirements.txt
+git clone https://github.com/your-username/week-3-project.git
+cd week-3-project
+
